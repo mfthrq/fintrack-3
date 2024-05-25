@@ -81,7 +81,14 @@ WSGI_APPLICATION = 'mypro.wsgi.application'
 # https://docs.djangoproject.com/en/4.1/ref/settings/#databases
 
 DATABASES = {
-    'default': dj_database_url.config(default='postgres://postgres:mfthrq17@localhost:5432/fintrackdb')
+    'default': {
+        'ENGINE': 'django.db.backends.postgresql',
+        'NAME': 'fintrackdb',
+        'USER': 'postgres',
+        'PASSWORD': 'mfthrq17',
+        'HOST': 'localhost',  # Replace 'x.x.x.x' with the IP address of your remote PostgreSQL server
+        'PORT': '5432',  # Replace with the port number if different from the default (5432)
+    }
 }
 
 
