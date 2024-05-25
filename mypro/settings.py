@@ -83,11 +83,14 @@ WSGI_APPLICATION = 'mypro.wsgi.application'
 DATABASES = {
     'default': {
         'ENGINE': 'django.db.backends.postgresql',
-        'NAME': 'fintrackdb',
-        'USER': 'postgres',
-        'PASSWORD': 'mfthrq17',
-        'HOST': 'localhost',  # Replace 'x.x.x.x' with the IP address of your remote PostgreSQL server
-        'PORT': '5432',  # Replace with the port number if different from the default (5432)
+        'NAME': 'defaultdb',                      # Nama basis data Anda
+        'USER': 'avnadmin',                       # Nama pengguna PostgreSQL
+        'PASSWORD': 'AVNS_o_ABuMqNlw84lNbiUhn',  # Kata sandi PostgreSQL
+        'HOST': 'pg-18f4b21e-lupanapas98-f274.d.aivencloud.com',  # Host PostgreSQL
+        'PORT': '23550',                          # Port PostgreSQL
+        'OPTIONS': {
+            'sslmode': 'require',
+        }
     }
 }
 
